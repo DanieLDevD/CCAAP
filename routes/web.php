@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/cadastro-usuario', function () {
-    return view('welcome');
+    return view('cadastro');
 });
 
 Route::get('/login', function(){
