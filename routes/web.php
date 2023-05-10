@@ -13,18 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/cadastro-usuario', function () {
-    return view('cadastro');
-});
+Route::post('/cadastro-usuario', CadastroUsuarioController::class);
 
-Route::get('/login', function(){
+Route::get('/login', LoginController::class);
 
-});
+Route::get('/home', HomeController::class);
 
-Route::get('/home', function(){
-
-});
-
-Route::get('cadastro-ave', function(){
-
-});
+Route::get('cadastro-ave', CadastroAve::class);

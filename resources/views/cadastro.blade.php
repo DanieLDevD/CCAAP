@@ -45,7 +45,7 @@
                     </svg>
                 </div>
 
-                <form action="clientes" method="post">
+                <form action="cadastro-usuario" method="post">
                      <input type="text" name="nome" id="nome" placeholder="nome">
                      <input type="text" name="email" id="email" placeholder="email">
                      <input type="text" name="endereco" id="endereco" placeholder="endereco">
