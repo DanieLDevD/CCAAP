@@ -53,8 +53,8 @@
                      <input type="password" name="senha" id="senha" placeholder="senha">
                      {{csrf_field()}}
                      <input type="submit" value="Enviar">
-                </form>   
-                              
+                </form>
+
                     <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
                         Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
                     </div>
