@@ -14,9 +14,3 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('/cadastro-usuario', CadastroUsuarioController::class);
-
-Route::get('/login', LoginController::class);
-
-Route::get('/home', HomeController::class);
-
-Route::get('cadastro-ave', CadastroAve::class);
