@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CadastrarController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,4 +15,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', [HomeController::class, 'teste']);
 
+Route::get('/cadastrar', [CadastrarController::class, 'create']);
+
+Route::post('/cadastrar', function(){
+    return 'enviado com sucesso';
+});
+
+Route::put('/cadastrar', function(){
+    return 'enviado com put';
+});
