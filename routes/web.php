@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use \App\Http\Controllers\Cadastro;
+use \App\Http\Controllers\homeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,4 +15,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//assistir primeira aula minuto 34 caso eu queira criar algo depois de /sobre/
 
+route::get('/', function(){
+    return view ('welcome');
+});
+
+route::get('/cadastro', Cadastro::class);
+
+route::post('/cadastro', function(){ 
+    var_dump($_POST);
+});
+
+
+route::get('/home', homeController::class);
