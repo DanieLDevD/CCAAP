@@ -17,10 +17,10 @@ class CadastrarController extends Controller
 
     public function create()
     {
-        $cadastrar = new Cadastrar();
+        /*$cadastrar = new Cadastrar();
         $dados = $cadastrar->lista();
-        dd ($dados);
-        return view('site.cadastrar.index');
+        dd ($dados);*/
+        return view('site.cadastrar.cadastrar');
     }
 
 }

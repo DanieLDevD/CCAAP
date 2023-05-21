@@ -11,11 +11,11 @@ route::get('/', function(){
     return view ('welcome');
 });
 
-route::get('/cadastro', CadastrarController::class);
+route::get('/cadastrar', [CadastrarController::class, 'create']);
 
-route::post('/cadastro', function(){ 
+route::post('/cadastrar', function(){ 
     var_dump($_POST);
 });
 
 
-route::get('/home', HomeController::class);
+route::get('/home', [HomeController::class, 'create']);
