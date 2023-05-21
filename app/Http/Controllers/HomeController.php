@@ -1,20 +1,17 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Home;
 
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     */
-    public function __invoke(Request $request)
+    public function create()
     {
-        return view('welcome');
-    }
-
-    public function teste() {
-        return 'testando';
+        $home = new Home();
+        $dados = $home->lista();
+        dd ($dados);
+        return view('site.home.index');
     }
 }

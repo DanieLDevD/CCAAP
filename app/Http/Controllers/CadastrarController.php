@@ -20,7 +20,7 @@ class CadastrarController extends Controller
         $cadastrar = new Cadastrar();
         $dados = $cadastrar->lista();
         dd ($dados);
-        return view('site.contato.index');
+        return view('site.cadastrar.index');
     }
 
 }
