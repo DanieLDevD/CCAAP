@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CadastrarController;
+use App\Http\Controllers\CadastrarPassaros;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\HomeController;
 
@@ -18,4 +19,8 @@ route::post('/cadastrar', function(){
 });
 
 
-route::get('/home', [HomeController::class, 'index']);
+route::get('/home', HomeController::class);
+route::get('/cadastrarpassaros', [CadastrarPassaros::class, 'create']);
+route::post('/cadastrarpassaros', function(){ 
+    var_dump($_POST);
+});

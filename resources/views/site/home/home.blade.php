@@ -42,19 +42,6 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($reg as $item)
-                        <tr>
-                            <td>{{$item->id}}</td>
-                            <td>{{$item->nome}}</td>
-                            <td>{{$item->anilha}}</td>
-                            <td>{{$item->anilhalegal}}</td>
-                            <td>{{$item->especie}}</td>
-                            <td>{{$item->datanasc}}</td>
-                            <td>{{$item->sexo}}</td>
-                            <td>{{$item->pai}}</td>
-                            <td>{{$item->mae}}</td>
-                        </tr>
-                        @endforeach
                     </tbody>
                 </table>
             </form> 

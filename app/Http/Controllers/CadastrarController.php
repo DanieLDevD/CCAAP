@@ -7,14 +7,6 @@ use Illuminate\Http\Request;
 
 class CadastrarController extends Controller
 {
-
-
-
-    public function index()
-    {
-        //
-    }
-
     public function create()
     {
         /*$cadastrar = new Cadastrar();
