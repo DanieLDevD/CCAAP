@@ -11,6 +11,7 @@ class Passaro extends Model
     
     public function Passaro() {
         return $this->hasMany(Passaro::class);
+
     }
 
     public function lista()

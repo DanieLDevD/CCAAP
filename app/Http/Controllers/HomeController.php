@@ -15,8 +15,10 @@ class HomeController extends Controller
         return view('site.home.home');
     }
     
+    
     public function index() {
         $reg = Passaro::all();
         return view('site.home.home', compact('reg'));
     }
+    
 }

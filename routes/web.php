@@ -18,4 +18,4 @@ route::post('/cadastrar', function(){
 });
 
 
-route::get('/home', [HomeController::class, 'create']);
+route::get('/home', [HomeController::class, 'index']);
