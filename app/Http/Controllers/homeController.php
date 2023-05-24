@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\Cadastrar;
 use App\Models\Passaro;
 
 use Illuminate\Http\Request;

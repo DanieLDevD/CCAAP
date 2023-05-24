@@ -10,8 +10,8 @@
     <body class="">
         <div class="page">
             <div class="main">
-                <button type="submit">Menu</button>
-                <button type="submit">Cadastrar ave</button>
+                <a href="{{route('home')}}">Arvore Genealogica</a>
+                <a href="{{route('cadastrarpassaros')}}">Cadastrar ave</a>
                 <input type="search" name="Pesquisar" id="" placeholder="Pesquisar">
             </div>
                         

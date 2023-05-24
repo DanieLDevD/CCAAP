@@ -13,14 +13,13 @@ route::get('/', function(){
 });
 
 route::get('/cadastrar', [CadastrarController::class, 'create']);
-
 route::post('/cadastrar', function(){ 
     var_dump($_POST);
 });
 
+route::get('/home', HomeController::class)->name('home');
 
-route::get('/home', HomeController::class);
-route::get('/cadastrarpassaros', [CadastrarPassaros::class, 'create']);
+route::get('/cadastrarpassaros', [CadastrarPassaros::class, 'create'])->name('cadastrarpassaros');
 route::post('/cadastrarpassaros', function(){ 
     var_dump($_POST);
 });
