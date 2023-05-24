@@ -16,6 +16,9 @@ return new class extends Migration
             $reg->string('nome', 255);
             $reg->string('anilha', 115);
             $reg->string('anilhalegal');
+            $reg->string('especie');
+            $reg->string('nasc');
+            $reg->string('sexo');
             $reg->string('mae');
             $reg->date('pai');
             $reg->timestamps();
