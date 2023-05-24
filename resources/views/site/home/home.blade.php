@@ -39,9 +39,25 @@
                             <th>Sexo</th>
                             <th>Pai</th>
                             <th>Mãe</th>
+                            <th>Ações</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <button type="submit">Editar</button>
+                                <button type="submit">Excluir</button>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </form> 
