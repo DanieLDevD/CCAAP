@@ -7,7 +7,7 @@
         @csrf
 
         <div>
-            <label for="email">Email:</label>
+            <label for="email">E-mail:</label>
             <input type="email" name="email" id="email" required>
         </div>
 
