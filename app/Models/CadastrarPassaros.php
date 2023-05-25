@@ -41,4 +41,9 @@ class CadastrarPassaros extends Model implements Authenticatable
         return 'remember_token';
     }
 
+    public static function create(array $data)
+    {
+        return static::query()->create($data);
+    }
+
 }

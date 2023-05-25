@@ -11,17 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('passaros', function (Blueprint $reg) {
-            $reg->id();
-            $reg->string('nome', 255);
-            $reg->string('anilha', 115);
-            $reg->string('anilhalegal');
-            $reg->string('especie');
-            $reg->string('nasc');
-            $reg->string('sexo');
-            $reg->string('mae');
-            $reg->date('pai');
-            $reg->timestamps();
+        Schema::create('passaros', function (Blueprint $table) {
+            $table->id();
+            $table->string('nome', 255);
+            $table->string('anilha', 115);
+            $table->string('anilhalegal');
+            $table->string('especie');
+            $table->date('nasc');
+            $table->string('sexo');
+            $table->string('mae');
+            $table->date('pai');
+            $table->timestamps();
         });
     }
 
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('passaros');
     }
 };

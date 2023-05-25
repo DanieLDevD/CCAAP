@@ -21,7 +21,7 @@ class CadastrarPassaros extends Controller
 
     public function registrarPassaro(Request $request)
     {
-        $request->validate([
+        $data = $request->validate([
             'nome' => 'required',
             'anilha' => 'required',
             'anilhalegal' => 'required',
@@ -32,17 +32,9 @@ class CadastrarPassaros extends Controller
             'mae' => 'required',
         ]);
 
-        $passaro = new CadastrarPassaros();
-        $passaro->nome = $request->nome;
-        $passaro->anilha = $request->anilha;
-        $passaro->anilhalegal = $request->anilhalegal;
-        $passaro->especie = $request->especie;
-        $passaro->nasc = $request->nasc;
-        $passaro->sexo = $request->sexo;
-        $passaro->pai = $request->pai;
-        $passaro->mae = $request->mae;
-        $passaro->save();
+        User::create($data);
 
-        return Redirect::route('home');
+        return redirect()->route('site.home')->with('success', 'User created successfully!');
+
     }
 }
