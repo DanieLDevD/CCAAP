@@ -14,17 +14,6 @@
                 <a href="{{route('cadastrarpassaros')}}">Cadastrar ave</a>
                 <input type="search" name="Pesquisar" id="" placeholder="Pesquisar">
             </div>
-                        
-            <form action="home" method="POST" class="content">
-                <h1>Pássaros</h1>
-                    
-                <div>
-                    <img src="https://play-lh.googleusercontent.com/pe5BxWsUls5cHBAImcv_PRQ8Qr4XBPTCmQ9on5YaNBbwzPAU1qfOgMk3g6L86BDbNms=s256-rw" alt="">
-                    <h5>Passaro</h5>
-                    <button type="submit">Editar</button>
-                    <button type="submit">Excluir</button>
-                </div>
-            </form>
 
             <form action="hometabela" method="POST" class="footer">
                 <table class="center">
