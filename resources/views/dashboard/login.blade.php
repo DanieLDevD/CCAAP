@@ -22,11 +22,11 @@
                 <label for="remember">Lembrar-me</label>
             </div>
 
-            <div class="mt-4 text-center">
+            <div class="mb-4 flex items-center justify-between">
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Entrar</button>
                 <a href="{{ route('welcome') }}" class="text-blue-500 hover:text-blue-700 underline">Voltar para a página inicial</a>
             </div>
 
-            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Entrar</button>
         </form>
     </div>
 @endsection
