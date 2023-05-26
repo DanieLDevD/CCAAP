@@ -46,4 +46,6 @@ class Ave extends Model implements Authenticatable
         return static::query()->create($data);
     }
 
+    
+
 }

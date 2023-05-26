@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -11,11 +12,11 @@
         <div class="page">
             <div class="main">
                 <a href="{{route('home')}}">Arvore Genealogica</a>
-                <a href="{{route('cadastrarpassaros')}}">Cadastrar ave</a>
+                <a href="{{route('cadastrarpassaros.index')}}">Cadastrar ave</a>
                 <input type="search" name="Pesquisar" id="" placeholder="Pesquisar">
             </div>
 
-            <form action="hometabela" method="POST" class="footer">
+            <form action="hometabela" method="post" class="footer">
                 <table class="center">
                     <thead>
                         <tr>
@@ -32,6 +33,7 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @isset($passaros)
                         @foreach($passaros as $passaro)
                         <tr>
                             <td>{{ $passaro->id }}</td>
@@ -49,6 +51,7 @@
                             </td>
                         </tr>
                         @endforeach
+                        @endisset
                     </tbody>
                 </table>
             </form> 

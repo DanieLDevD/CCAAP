@@ -11,7 +11,7 @@
     <body>
         <div class="content">
             <div class="form">
-                <form action="cadastrarpassaros" method="post">
+                <form action="{{route('home')}}" method="post">
                     <h2>Cadastre seu pássaro:</h2>
                     <input type="text" name="nome" id="nome" placeholder="Nome">
                     <input type="text" name="anilha" id="anilha" placeholder="Anilha">
