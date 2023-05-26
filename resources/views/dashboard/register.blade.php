@@ -30,6 +30,10 @@
         <label for="password_confirmation" class="block mb-1">Confirmar senha</label>
         <input type="password" name="password_confirmation" id="password_confirmation" required class="w-full px-3 py-2 border rounded">
     </div>
+    
+    <div class="mt-4 text-center">
+        <a href="{{ route('welcome') }}" class="text-blue-500 hover:text-blue-700 underline">Voltar para a página inicial</a>
+    </div>    
 
     <div>
         <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Cadastrar</button>

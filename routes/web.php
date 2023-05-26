@@ -18,7 +18,9 @@ use App\Http\Controllers\WelcomeController;
 */
 
 // Rotas da Página de Welcome
-Route::get('/ccaap', [WelcomeController::class, 'index'])->name('welcome');
+Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
+
+Route::get('/', [WelcomeController::class, 'welcome'])->name('welcome');
 
 // Rotas usuário login e register
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');

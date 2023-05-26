@@ -18,8 +18,12 @@
             </div>
 
             <div class="mb-4 flex items-center">
-                <input type="checkbox" name="remember" id="remember" class="mr-2">
+                <input type="checkbox" name="remember" id="remember" class="mr-2" {{ old('remember') ? 'checked' : '' }}>
                 <label for="remember">Lembrar-me</label>
+            </div>
+
+            <div class="mt-4 text-center">
+                <a href="{{ route('welcome') }}" class="text-blue-500 hover:text-blue-700 underline">Voltar para a página inicial</a>
             </div>
 
             <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Entrar</button>

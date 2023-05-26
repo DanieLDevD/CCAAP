@@ -10,4 +10,8 @@ class WelcomeController extends Controller
     {
         return view('dashboard.welcome');
     }
+    public function welcome()
+    {
+        return view('dashboard.welcome');
+    }
 }
