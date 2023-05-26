@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\WelcomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,9 @@ use App\Http\Controllers\DashboardController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+// Rotas da Página de Welcome
+Route::get('/ccaap', [WelcomeController::class, 'index'])->name('welcome');
 
 // Rotas usuário login e register
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
