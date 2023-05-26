@@ -31,3 +31,8 @@ Route::post('/register', [RegisterController::class, 'register']);
 
 // Rota da index
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+    Route::get('/logout', [DashboardController::class, 'logout'])->name('logout');
+});
