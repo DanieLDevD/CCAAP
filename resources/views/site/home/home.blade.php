@@ -32,21 +32,23 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach($passaros as $passaro)
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>{{ $passaro->id }}</td>
+                            <td>{{ $passaro->nome }}</td>
+                            <td>{{ $passaro->anilha }}</td>
+                            <td>{{ $passaro->anilhalegal }}</td>
+                            <td>{{ $passaro->especie }}</td>
+                            <td>{{ $passaro->nasc }}</td>
+                            <td>{{ $passaro->sexo }}</td>
+                            <td>{{ $passaro->pai }}</td>
+                            <td>{{ $passaro->mae }}</td>
                             <td>
                                 <button type="submit">Editar</button>
                                 <button type="submit">Excluir</button>
                             </td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </form> 

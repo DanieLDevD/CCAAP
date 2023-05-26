@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Contracts\Auth\Authenticatable;
 
 
-class CadastrarPassaros extends Model implements Authenticatable
+class Ave extends Model implements Authenticatable
 {
     use HasFactory;
 
