@@ -1,10 +1,7 @@
 <?php
 
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\CadastrarController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\Painel\HomeController as PainelHomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
 
@@ -19,26 +16,14 @@ use App\Http\Controllers\DashboardController;
 |
 */
 
-// Rotas usuario
+// Rotas usuário login e register
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+
 Route::post('/login', [AuthController::class, 'login']);
-
-
-// Rotas passaro
-// Route::get('painel', HomeController::class)->name('painel');
-// Route::get('painel/aves',[])->name('painel.aves');
-// Route::get('painel/aves/novo', [])->name('painel.aves.novo');
-// Route::post('painel/aves/novo', [])->name('painel.aves.salvar');
-// Route::post('painel/aves/editar/{id}',[])->name('painel.aves.editar');
-// Route::put('painel/aves/editar/{id}',[])->name('painel.aves.atualizar');
-// Route::get('painel/aves/deletar/{id}',[])->name('painel.aves.deletar');
-
-Route::put('/cadastrar', function(){
-    return 'enviado com put';
-});
 
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 
 Route::post('/register', [RegisterController::class, 'register']);
 
+// Rota da index
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
