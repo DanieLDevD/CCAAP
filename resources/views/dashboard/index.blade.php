@@ -13,7 +13,7 @@
             <div class="container mx-auto flex justify-between items-center">
                 <div>
                     <a href="#" class="text-xl font-bold">Logo</a>
-                    <h3 class="text-2xl font-bold mb-4">Seja Bem Vindo, <span class="text-blue-500 hover:text-blue-700">{{ $nomeUser }}</span>, ao CCAAP! </h2>
+                    <h3 class="text-2xl font-bold mb-4">Seja Bem Vindo, <span class="text-blue-500 hover:text-blue-700">{{ $simpleName }}</span>, ao CCAAP! </h2>
                 </div>
                 <div>
                     <a href="#" class="text-gray-300 mr-4">Cadastrar Ave</a>

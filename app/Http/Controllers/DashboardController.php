@@ -11,9 +11,10 @@ class DashboardController extends Controller
     public function index()
     {
         $user = User::find(Auth::id()); // procura o usuário 'ID' autenticado no bd para retornar
-        $nomeUser = $user->name; // retorna na variavel o nome do usuário.
+        $names = explode(' ', $user->name); // Divide o nome completo
+        $simpleName = implode(' ', array_slice($names, 0, 2)); // Obtem os 2 primeiros nomes
 
-        return view('dashboard.index', compact('nomeUser'));
+        return view('dashboard.index', compact('simpleName'));
     }
 
     public function logout()
