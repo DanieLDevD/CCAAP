@@ -14,46 +14,47 @@
             <input type="search" name="Pesquisar" id="" placeholder="Pesquisar">
         </div>
 
-        <form action="hometabela" method="post" class="footer">
-            @csrf   
-            <table class="center">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nome</th>
-                        <th>Anilha</th>
-                        <th>Anilha Legal</th>
-                        <th>Espécie</th>
-                        <th>Data de Nascimento</th>
-                        <th>Sexo</th>
-                        <th>Pai</th>
-                        <th>Mãe</th>
-                        <th>Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @isset($passaros)
-                    @foreach($passaros as $passaro)
-                    <tr>
-                        <td>{{ $passaro->id }}</td>
-                        <td>{{ $passaro->nome }}</td>
-                        <td>{{ $passaro->anilha }}</td>
-                        <td>{{ $passaro->anilhalegal }}</td>
-                        <td>{{ $passaro->especie }}</td>
-                        <td>{{ $passaro->nasc }}</td>
-                        <td>{{ $passaro->sexo }}</td>
-                        <td>{{ $passaro->pai }}</td>
-                        <td>{{ $passaro->mae }}</td>
-                        <td>
-                            <button type="submit">Editar</button>
+        <table class="center">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Anilha</th>
+                    <th>Anilha Legal</th>
+                    <th>Espécie</th>
+                    <th>Data de Nascimento</th>
+                    <th>Sexo</th>
+                    <th>Pai</th>
+                    <th>Mãe</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @isset($passaros)
+                @foreach($passaros as $passaro)
+                <tr>
+                    <td>{{ $passaro->id }}</td>
+                    <td>{{ $passaro->nome }}</td>
+                    <td>{{ $passaro->anilha }}</td>
+                    <td>{{ $passaro->anilhalegal }}</td>
+                    <td>{{ $passaro->especie }}</td>
+                    <td>{{ $passaro->nasc }}</td>
+                    <td>{{ $passaro->sexo }}</td>
+                    <td>{{ $passaro->pai }}</td>
+                    <td>{{ $passaro->mae }}</td>
+                    <td>
+                        <a href="{{ route('passaros.edit', $passaro->id) }}">Editar</a>
+                        <form action="{{ route('passaros.excluir', $passaro->id) }}" method="post">
+                            @csrf
+                            @method('DELETE')
                             <button type="submit">Excluir</button>
-                        </td>
-                    </tr>
-                    @endforeach
-                    @endisset
-                </tbody>
-            </table>
-        </form> 
+                        </form>
+                    </td>
+                </tr>
+                @endforeach
+                @endisset
+            </tbody>
+        </table>
     </div>
 </body>
 </html>

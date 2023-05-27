@@ -36,4 +36,12 @@ class CadastrarPassaros extends Controller
 
         return redirect()->route('home')->with('success', 'Ave registrada com sucesso!');
     }
+
+    public function excluirPassaro(Request $request, $id)
+    {
+        $passaro = Ave::findOrFail($id);
+        $passaro->delete();
+
+        return redirect()->route('home')->with('success', 'Ave excluída com sucesso!');
+    }
 }
