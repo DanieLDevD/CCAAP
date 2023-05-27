@@ -31,10 +31,18 @@
         <div class="container mx-auto mt-8">
             <h2 class="text-2xl font-bold mb-4">Lista de Aves Cadastradas</h2>
             <ul class="border border-gray-200 rounded-lg">
-                <!-- Iterar e exibir a lista de aves cadastradas aqui -->
-                <li class="px-4 py-2">Ave 1</li>
-                <li class="px-4 py-2">Ave 2</li>
-                <li class="px-4 py-2">Ave 3</li>
+                @foreach($birds as $bird)
+                <li class="px-4 py-2">
+                    <strong>Nome:</strong> {{ $bird->nome }}<br>
+                    <strong>Espécie:</strong> {{ $bird->especie }}<br>
+                    <strong>Anilha:</strong> {{ $bird->anilha }}<br>
+                    <strong>Anilha Legal:</strong> {{ $bird->anilha_legal }}<br>
+                    <strong>Data de Nascimento:</strong> {{ $bird->data_nascimento }}<br>
+                    <strong>Sexo:</strong> {{ $bird->sexo }}<br>
+                    <strong>Mãe:</strong> {{ $bird->mae }}<br>
+                    <strong>Pai:</strong> {{ $bird->pai }}
+                </li>
+                @endforeach
             </ul>
         </div>
     </div>
