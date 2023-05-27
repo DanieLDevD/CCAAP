@@ -38,7 +38,7 @@
             </div>
             
             <div class="mb-4 flex items-center justify-between">
-                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Entrar</button>
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Cadastrar</button>
                 <a href="{{ route('welcome') }}" class="text-blue-500 hover:text-blue-700 underline">Voltar para a página inicial</a>
             </div>
 

@@ -11,11 +11,11 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $user = User::find(Auth::id()); // procura o usuário 'ID' autenticado no bd para retornar
+        $user = User::find(Auth::id()); // Procura o usuário autenticado no BD
         $names = explode(' ', $user->name); // Divide o nome completo
-        $compoundName = implode(' ', array_slice($names, 0, 2)); // Obtem os 2 primeiros nomes
+        $compoundName = implode(' ', array_slice($names, 0, 2)); // Obtém os 2 primeiros nomes
 
-        $birds = Bird::all(); // ou qualquer outra forma de obter a coleção de aves cadastradas
+        $birds = Bird::where('user_id', Auth::id())->get(); // Filtra as aves pelo ID do usuário autenticado
 
         return view('dashboard.index', compact('compoundName', 'birds'));
     }
