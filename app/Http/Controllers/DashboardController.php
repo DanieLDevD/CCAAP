@@ -12,9 +12,9 @@ class DashboardController extends Controller
     {
         $user = User::find(Auth::id()); // procura o usuário 'ID' autenticado no bd para retornar
         $names = explode(' ', $user->name); // Divide o nome completo
-        $simpleName = implode(' ', array_slice($names, 0, 2)); // Obtem os 2 primeiros nomes
+        $compoundName = implode(' ', array_slice($names, 0, 2)); // Obtem os 2 primeiros nomes
 
-        return view('dashboard.index', compact('simpleName'));
+        return view('dashboard.index', compact('compoundName'));
     }
 
     public function logout()
