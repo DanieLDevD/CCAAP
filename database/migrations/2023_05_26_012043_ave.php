@@ -20,7 +20,7 @@ return new class extends Migration
             $table->date('nasc');
             $table->string('sexo');
             $table->string('mae');
-            $table->date('pai');
+            $table->string('pai');
             $table->timestamps();
         });
     }

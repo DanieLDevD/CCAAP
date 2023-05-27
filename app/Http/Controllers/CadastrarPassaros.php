@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Models\Ave;
 use Illuminate\Http\Request;
 
 class CadastrarPassaros extends Controller
 {
+
     public function index()
     {
         $passaros = Ave::all();
-        return view('site.cadastrar.cadastrarpassaros')->with('passaros', $passaros);
+        return view('home', compact('passaros'));
     }
-    
+
     public function create()
     {
         return view('site.cadastrar.cadastrarpassaros');
@@ -34,7 +34,6 @@ class CadastrarPassaros extends Controller
 
         Ave::create($data);
 
-        return redirect()->route('home')->with('success', 'User created successfully!');
-
+        return redirect()->route('home')->with('success', 'Ave registrada com sucesso!');
     }
 }
