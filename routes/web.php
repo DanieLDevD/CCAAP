@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\BirdController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,10 +32,13 @@ Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->na
 
 Route::post('/register', [RegisterController::class, 'register']);
 
-// Rota da index
-// middleware auth é responsavel por apenas permitir conexão dos usuarios autenticados pelo register.
+// Rota da index, middleware auth é responsavel por apenas permitir conexão dos usuarios autenticados pelo register.
 Route::middleware('auth')->group(function () {
+    // login e register
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
     Route::get('/logout', [DashboardController::class, 'logout'])->name('logout');
-});
 
+    // Rota de cadastrar ave
+    Route::get('/birds/create', [BirdController::class, 'create'])->name('birds.create');
+    Route::post('/birds', [BirdController::class, 'store'])->name('birds.store');
+});
