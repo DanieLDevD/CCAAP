@@ -1,5 +1,4 @@
-<script src="https://cdn.tailwindcss.com"></script>
-
+@extends('layouts.app')
 <div class="flex items-center justify-center h-screen">
     <div class="max-w-md w-full mx-auto">
         <div class="text-center mb-4">

@@ -1,5 +1,4 @@
 @extends('layouts.app')
-<script src="https://cdn.tailwindcss.com"></script>
 @section('content')
     <div class="flex items-center justify-center h-screen">
         <div class="max-w-md w-full mx-auto">
