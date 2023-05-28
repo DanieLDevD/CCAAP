@@ -17,68 +17,49 @@ Antes de começar, verifique se você atende aos seguintes requisitos:
 
 Siga estas etapas para clonar o repositório, instalar o projeto e configurar o banco de dados em sua máquina local via terminal:
 
-**1. Clone o repositório:**
+1. Clone o repositório:
 
     ```shell
-   git clone https://github.com/DanieLDevD/CCAAP.git
-    ```
+   git clone 
 
-**2. Navegue até o diretório do projeto:**
+2. Navegue até o diretório do projeto:
 
-    ```shell
     cd nome-do-projeto
-    ```
 
-**3. Instale as dependências do Composer:**
+3. Instale as dependências do Composer:
 
-    ```shell
     composer install
-    ```
 
-**4. Instale as dependências do Node.js (incluindo o Tailwind CSS):**
+4. Instale as dependências do Node.js (incluindo o Tailwind CSS):
 
-    ```shell
     npm install
-    ```
 
-**5. Crie o arquivo .env:**
+5. Crie o arquivo .env:
 
-    ```shell
     cp .env.example .env
-    ```
 
-**6. Configure as variáveis de ambiente no arquivo .env para conectar-se ao banco de dados. Por exemplo:**
+6. Configure as variáveis de ambiente no arquivo .env para conectar-se ao banco de dados. Por exemplo:
 
-    ```shell
     DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
     DB_PORT=3306
     DB_DATABASE=nome-do-banco-de-dados
     DB_USERNAME=usuario-do-banco-de-dados
     DB_PASSWORD=senha-do-banco-de-dados
-    ```
 
-**7. Gere uma nova chave de aplicativo:**
+7. Gere uma nova chave de aplicativo:
 
-    ```shell
     php artisan key:generate
-    ```
 
-**8. Compile os ativos (incluindo o CSS do Tailwind):**
+8. Compile os ativos (incluindo o CSS do Tailwind):
 
-    ```shell
     npm run dev
-    ```
 
-**9. Execute as migrações do banco de dados para criar as tabelas necessárias:**
+9. Execute as migrações do banco de dados para criar as tabelas necessárias:
 
-    ```shell
     php artisan migrate
-    ```
 
-**10. Execute o servidor de desenvolvimento do Laravel:**
+10. Execute o servidor de desenvolvimento do Laravel:
 
-    ```shell
     php artisan serve
     ```
-
