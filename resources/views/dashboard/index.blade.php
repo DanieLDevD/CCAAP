@@ -34,6 +34,7 @@
                         <th class="px-4 py-2 bg-green-200 text-green-800 text-center">Sexo</th>
                         <th class="px-4 py-2 bg-green-200 text-green-800 text-center">Mãe</th>
                         <th class="px-4 py-2 bg-green-200 text-green-800 text-center">Pai</th>
+                        <th class="px-4 py-2 bg-green-200 text-green-800 text-center">Ações</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -47,6 +48,10 @@
                         <td class="px-4 py-2 text-center">{{ $bird->sexo }}</td>
                         <td class="px-4 py-2 text-center">{{ $bird->mae }}</td>
                         <td class="px-4 py-2 text-center">{{ $bird->pai }}</td>
+                        <td>
+                            <a>Editar</a>
+                            <button>Excluir</button>
+                        </td>
                     </tr>
                     @endforeach
                 </tbody>
