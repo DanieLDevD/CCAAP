@@ -89,7 +89,7 @@ Antes de começar, verifique se você atende aos seguintes requisitos:
 Siga estas etapas para clonar o repositório, instalar o projeto e configurar o banco de dados em sua máquina local via terminal:
 
 1. Clone o repositório:
-
+    ```shell
    git clone <URL do repositório>
 
 2. Navegue até o diretório do projeto:
