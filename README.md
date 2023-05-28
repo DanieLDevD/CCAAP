@@ -81,3 +81,13 @@ Siga estas etapas para clonar o repositório, instalar o projeto e configurar o 
     ```shell
     php artisan serve
     ```
+
+## Uso
+
+Siga estas etapas para iniciar o projeto e usá-lo localmente:
+
+1. Certifique-se de que o servidor de desenvolvimento do Laravel esteja em execução.
+
+2. Abra o navegador e acesse http://localhost:8000 (ou outro endereço fornecido pelo terminal).
+
+3. Você poderá ver o projeto em ação e interagir com suas funcionalidades.
