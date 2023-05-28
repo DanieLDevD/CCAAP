@@ -41,4 +41,5 @@ Route::middleware('auth')->group(function () {
     // Rota de cadastrar ave
     Route::get('/birds/create', [BirdController::class, 'create'])->name('birds.create');
     Route::post('/birds', [BirdController::class, 'store'])->name('birds.store');
+    Route::delete('/birds/{bird}', [BirdController::class, 'destroy'])->name('birds.destroy');
 });

@@ -1,4 +1,6 @@
 @extends('layouts.app')
+
+@section('content')
 <body>
     <div class="flex flex-col min-h-screen">
         <!-- Navbar -->
@@ -48,9 +50,13 @@
                         <td class="px-4 py-2 text-center">{{ $bird->sexo }}</td>
                         <td class="px-4 py-2 text-center">{{ $bird->mae }}</td>
                         <td class="px-4 py-2 text-center">{{ $bird->pai }}</td>
-                        <td>
-                            <a>Editar</a>
-                            <button>Excluir</button>
+                        <td class="px-4 py-2 text-center">
+                            <a href="#" class="text-blue-500 hover:text-blue-700">Editar</a>
+                            <form action="{{ route('birds.destroy', $bird->id) }}" method="POST" class="inline-block">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="ml-2 bg-red-500 px-4 py-2 rounded-lg">Excluir</button>
+                            </form>
                         </td>
                     </tr>
                     @endforeach
@@ -60,3 +66,5 @@
     </div>
 
     <script src="{{ asset('js/app.js') }}"></script>
+</body>
+@endsection

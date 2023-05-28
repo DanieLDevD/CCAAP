@@ -13,6 +13,12 @@ class BirdController extends Controller
         return view('dashboard.birds.create');
     }
 
+    public function destroy(Bird $bird)
+    {
+        $bird->delete();
+        return redirect()->back();
+    }
+
     public function store(Request $request)
     {
         $request->validate([
