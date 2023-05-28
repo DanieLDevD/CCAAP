@@ -41,5 +41,11 @@ Route::middleware('auth')->group(function () {
     // Rota de cadastrar ave
     Route::get('/birds/create', [BirdController::class, 'create'])->name('birds.create');
     Route::post('/birds', [BirdController::class, 'store'])->name('birds.store');
+
+    // Rota deletar ave
     Route::delete('/birds/{bird}', [BirdController::class, 'destroy'])->name('birds.destroy');
+
+    // Rota editar ave
+    Route::put('/birds/{bird}', [BirdController::class, 'update'])->name('birds.update');
+    Route::get('/birds/{bird}/edit', [BirdController::class, 'edit'])->name('birds.edit');
 });

@@ -51,7 +51,7 @@
                         <td class="px-4 py-2 text-center">{{ $bird->mae }}</td>
                         <td class="px-4 py-2 text-center">{{ $bird->pai }}</td>
                         <td class="px-4 py-2 text-center">
-                            <a href="#" class="text-blue-500 hover:text-blue-700">Editar</a>
+                            <a href="{{ route('birds.edit', $bird) }}" class="text-blue-500 hover:text-blue-700">Editar</a>
                             <form action="{{ route('birds.destroy', $bird->id) }}" method="POST" class="inline-block">
                                 @csrf
                                 @method('DELETE')
