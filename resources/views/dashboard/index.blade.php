@@ -13,7 +13,7 @@
             <div class="container mx-auto flex justify-between items-center">
                 <div>
                     <a href="#" class="text-xl font-bold text-green-200">Logo</a>
-                    <h3 class="text-2xl font-bold mb-4">Seja Bem Vindo, <span class="text-blue-500 hover:text-blue-700">{{ $compoundName }}</span>, ao CCAAP!</h2>
+                    <h3 class="text-2xl font-bold mb-4"> Olá <span class="text-blue-500 hover:text-blue-700">{{ $compoundName }}</span>, Bem Vindo ao CCAAP!</h2>
                 </div>
                 <div>
                     <a href="{{ route('birds.create') }}" class="text-gray-300 mr-4">Cadastrar Ave</a>
