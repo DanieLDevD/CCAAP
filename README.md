@@ -20,7 +20,7 @@ Siga estas etapas para clonar o repositório, instalar o projeto e configurar o 
 1. Clone o repositório:
 
     ```shell
-   git clone
+   git clone https://github.com/DanieLDevD/CCAAP.git
    ```
 
 2. Navegue até o diretório do projeto:
