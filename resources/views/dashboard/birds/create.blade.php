@@ -1,8 +1,8 @@
 @extends('layouts.app')
 @section('content')
-<div class="flex items-center justify-center min-h-screen">
+<div class="flex items-center justify-center min-h-screen bg-green-200">
     <div class="max-w-md w-full mx-4">
-        <h2 class="text-2xl font-bold mb-4">Cadastrar Ave</h2>
+        <h2 class="text-2xl font-bold mb-4 text-center">Cadastrar Ave</h2>
 
         <form action="{{ route('birds.store') }}" method="POST" class="mb-4">
             @csrf
