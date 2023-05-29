@@ -46,7 +46,7 @@
                         <td class="px-4 py-2 text-center">{{ $bird->especie }}</td>
                         <td class="px-4 py-2 text-center">{{ $bird->anilha }}</td>
                         <td class="px-4 py-2 text-center">{{ $bird->anilha_legal }}</td>
-                        <td class="px-4 py-2 text-center">{{ $bird->data_nascimento }}</td>
+                        <td class="px-4 py-2 text-center">{{ date('d/m/Y', strtotime($bird->data_nascimento)) }}</td>
                         <td class="px-4 py-2 text-center">{{ $bird->sexo }}</td>
                         <td class="px-4 py-2 text-center">{{ $bird->mae }}</td>
                         <td class="px-4 py-2 text-center">{{ $bird->pai }}</td>

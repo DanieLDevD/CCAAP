@@ -29,7 +29,7 @@
 
             <div class="mb-4">
                 <label for="data_nascimento" class="block mb-1">Data de Nascimento:</label>
-                <input type="date" name="data_nascimento" id="data_nascimento" required class="w-full px-3 py-2 border rounded">
+                <input type="date" name="data_nascimento" id="data_nascimento" pattern="\d{2}/\d{2}/\d{4}" placeholder="dd/mm/aaaa" required class="w-full px-3 py-2 border rounded">
             </div>
 
             <div class="mb-4">

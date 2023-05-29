@@ -25,7 +25,7 @@
             </div>
             <div class="mb-4">
                 <label for="data_nascimento" class="block text-gray-700 font-bold mb-2">Data de Nascimento:</label>
-                <input type="text" id="data_nascimento" name="data_nascimento" value="{{ $bird->data_nascimento }}" class="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <input type="text" id="data_nascimento" name="data_nascimento" value="{{ date('d/m/Y', strtotime($bird->data_nascimento)) }}" class="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
             </div>
             <div class="mb-4">
                 <label for="sexo" class="block text-gray-700 font-bold mb-2">Sexo:</label>
@@ -39,9 +39,10 @@
                 <label for="pai" class="block text-gray-700 font-bold mb-2">Pai:</label>
                 <input type="text" id="pai" name="pai" value="{{ $bird->pai }}" class="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
             </div>
-            <div class="flex justify-center">
+            <div class="flex justify-between items-center mb-4">
                 <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg">Atualizar</button>
-            </div>
+                <a href="{{ route('dashboard.index') }}" class="text-blue-500 hover:underline">Voltar para a Dashboard</a>
+            </div>            
         </form>
     </div>
 
