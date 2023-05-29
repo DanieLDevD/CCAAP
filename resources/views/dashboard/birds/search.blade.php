@@ -13,7 +13,7 @@
                     <a href="{{ route('birds.create') }}" class="text-gray-300 mr-4">Cadastrar Ave</a>
                     <a href="#" class="text-gray-300 mr-4">Árvore Genealógica</a>
                     <form action="{{ route('pesquisar') }}" method="GET" class="inline-block">
-                        <input type="text" placeholder="Pesquisar Ave" class="px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-black" name="pesquisa" id="">
+                        <input type="text" placeholder="Pesquisar Ave" class="px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-black" name="termo" id="">
                         <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg ml-2">Pesquisar</button>
                     </form>
                     <a href="{{ route('logout') }}" class="text-gray-300 ml-4 inline-block border border-green-300 px-4 py-2 rounded-lg hover:bg-green-300 hover:text-white">Sair</a>
@@ -24,6 +24,7 @@
         <!-- Body -->
         <div class="container mx-auto mt-8">
             <h2 class="text-2xl font-bold mb-4">Lista de Aves Cadastradas</h2>
+            @if (isset($resultados))
             <table class="min-w-full border border-gray-200 rounded-lg">
                 <thead>
                     <tr>
@@ -39,16 +40,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($birds as $bird)
+                    @foreach ($resultados as $resultado)
                     <tr>
-                        <td class="px-4 py-2 text-center">{{ $bird->nome }}</td>
-                        <td class="px-4 py-2 text-center">{{ $bird->especie }}</td>
-                        <td class="px-4 py-2 text-center">{{ $bird->anilha }}</td>
-                        <td class="px-4 py-2 text-center">{{ $bird->anilha_legal }}</td>
-                        <td class="px-4 py-2 text-center">{{ date('d/m/Y', strtotime($bird->data_nascimento)) }}</td>
-                        <td class="px-4 py-2 text-center">{{ $bird->sexo }}</td>
-                        <td class="px-4 py-2 text-center">{{ $bird->mae }}</td>
-                        <td class="px-4 py-2 text-center">{{ $bird->pai }}</td>
+                        <td class="px-4 py-2 text-center">{{ $resultado->nome }}</td>
+                        <td class="px-4 py-2 text-center">{{ $resultado->especie }}</td>
+                        <td class="px-4 py-2 text-center">{{ $resultado->anilha }}</td>
+                        <td class="px-4 py-2 text-center">{{ $resultado->anilha_legal }}</td>
+                        <td class="px-4 py-2 text-center">{{ date('d/m/Y', strtotime($resultado->data_nascimento)) }}</td>
+                        <td class="px-4 py-2 text-center">{{ $resultado->sexo }}</td>
+                        <td class="px-4 py-2 text-center">{{ $resultado->mae }}</td>
+                        <td class="px-4 py-2 text-center">{{ $resultado->pai }}</td>
                         <td class="px-4 py-2 text-center">
                             <a href="{{ route('birds.edit', $bird) }}" class="text-blue-500 hover:text-blue-700">Editar</a>
                             <form action="{{ route('birds.destroy', $bird->id) }}" method="POST" class="inline-block">
@@ -61,6 +62,9 @@
                     @endforeach
                 </tbody>
             </table>
+            @else
+            <p>Nenhum resultado encontrado.</p>
+            @endif
         </div>
     </div>
 

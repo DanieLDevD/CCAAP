@@ -73,4 +73,13 @@ class BirdController extends Controller
     {
         return view('dashboard.birds.edit', compact('bird'));
     }
+
+    public function pesquisar(Request $request)
+    {
+        $termo = $request->input('termo');
+
+        // Faça a lógica de pesquisa aqui e retorne os resultados para a view
+
+        return view('search.resultados', compact('resultados'));
+    }
 }
