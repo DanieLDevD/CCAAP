@@ -25,11 +25,15 @@
             </div>
             <div class="mb-4">
                 <label for="data_nascimento" class="block text-gray-700 font-bold mb-2">Data de Nascimento:</label>
-                <input type="text" id="data_nascimento" name="data_nascimento" value="{{ date('d/m/Y', strtotime($bird->data_nascimento)) }}" class="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <input type="date" id="data_nascimento" name="data_nascimento" value="{{ date('d/m/Y', strtotime($bird->data_nascimento)) }}" class="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
             </div>
             <div class="mb-4">
                 <label for="sexo" class="block text-gray-700 font-bold mb-2">Sexo:</label>
-                <input type="text" id="sexo" name="sexo" value="{{ $bird->sexo }}" class="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <select name="sexo" id="sexo" required class="w-full px-3 py-2 border rounded">
+                    <option value="Macho">Macho</option>
+                    <option value="Fêmea">Fêmea</option>
+                    <option value="Indefinido">Indefinido</option>
+                </select>
             </div>
             <div class="mb-4">
                 <label for="mae" class="block text-gray-700 font-bold mb-2">Mãe:</label>

@@ -50,6 +50,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/birds/{bird}/edit', [BirdController::class, 'edit'])->name('birds.edit');
 
     //pesquisar
-    Route::get('/pesquisar', [BirdController::class, 'pesquisar'])->name('pesquisar');
+   // Route::get('/pesquisar', [BirdController::class, 'pesquisar'])->name('pesquisar');
 
 });
