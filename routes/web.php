@@ -51,5 +51,5 @@ Route::middleware('auth')->group(function () {
 
     //pesquisar
    // Route::get('/pesquisar', [BirdController::class, 'pesquisar'])->name('pesquisar');
-
+    Route::get('/birds/search',[DashboardController::class, 'search'])->name('birds.search');
 });

@@ -4,16 +4,16 @@
 <body>
     <div class="flex flex-col min-h-screen">
         <!-- Navbar -->
-        <nav class="bg-green-800 text-white py-4 px-6">
+        <nav class="bg-green-800  py-4 px-6">
             <div class="container mx-auto flex justify-between items-center">
                 <div>
-                    <h3 class="text-2xl font-bold mb-4"> Olá <span class="text-blue-500 hover:text-blue-700">{{ $compoundName }}</span>. Bem Vindo ao CCAAP!</h2>
+                    <h3 class="text-2xl font-bold mb-4 text-white"> Olá <span class="text-blue-500 hover:text-blue-700">{{ $compoundName }}</span>. Bem Vindo ao CCAAP!</h2>
                 </div>
                 <div>
                     <a href="{{ route('birds.create') }}" class="text-gray-300 mr-4">Cadastrar Ave</a>
                     <a href="#" class="text-gray-300 mr-4">Árvore Genealógica</a>
-                    <form action="" method="GET" class="inline-block">
-                        <input type="text" placeholder="Pesquisar Ave" class="px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-black" name="pesquisa" id="">
+                    <form action="{{ route('birds.search') }}" method="GET" class="inline-block">
+                        <input type="text" placeholder="Pesquisar Ave" class="px-4 py-2 rounded-lg  focus:ring-blue-500 text-black" name="pesquisa" id="">
                         <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg ml-2">Pesquisar</button>
                     </form>
                     <a href="{{ route('logout') }}" class="text-gray-300 ml-4 inline-block border border-green-300 px-4 py-2 rounded-lg hover:bg-green-300 hover:text-white">Sair</a>
