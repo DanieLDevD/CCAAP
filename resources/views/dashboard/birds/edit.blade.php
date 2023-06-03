@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <body class="flex items-center justify-center min-h-screen bg-gray-100">
     <div class="w-full max-w-md bg-white rounded-lg shadow-md p-8">
         <h2 class="text-2xl font-bold mb-4">Editar Cadastro de Pássaro</h2>
@@ -46,7 +47,7 @@
             <div class="flex justify-between items-center mb-4">
                 <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg">Atualizar</button>
                 <a href="{{ route('dashboard.index') }}" class="text-blue-500 hover:underline">Voltar para a Dashboard</a>
-            </div>            
+            </div>
         </form>
     </div>
 

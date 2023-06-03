@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <body>
     <div class="flex flex-col min-h-screen">
         <!-- Navbar -->

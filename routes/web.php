@@ -49,7 +49,6 @@ Route::middleware('auth')->group(function () {
     Route::put('/birds/{bird}', [BirdController::class, 'update'])->name('birds.update');
     Route::get('/birds/{bird}/edit', [BirdController::class, 'edit'])->name('birds.edit');
 
-    //pesquisar
-   // Route::get('/pesquisar', [BirdController::class, 'pesquisar'])->name('pesquisar');
-    Route::get('/birds/search',[DashboardController::class, 'search'])->name('birds.search');
+    // Rota pesquisar
+    Route::get('/birds/search', [DashboardController::class, 'search'])->name('birds.search');
 });

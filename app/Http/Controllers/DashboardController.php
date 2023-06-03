@@ -21,26 +21,26 @@ class DashboardController extends Controller
     }
 
     public function search(Request $request)
-{
-    $user = User::find(Auth::id());
-    $names = explode(' ', $user->name);
-    $compoundName = implode(' ', array_slice($names, 0, 2));
+    {
+        $user = User::find(Auth::id());
+        $names = explode(' ', $user->name);
+        $compoundName = implode(' ', array_slice($names, 0, 2));
 
-    $searchTerm = $request->input('pesquisa');
+        $searchTerm = $request->input('pesquisa');
 
-    $birds = Bird::where('user_id', Auth::id())
-                 ->where(function ($query) use ($searchTerm) {
-                     $query->where('nome', 'like', '%'.$searchTerm.'%')
-                           ->orWhere('especie', 'like', '%'.$searchTerm.'%')
-                           ->orWhere('anilha', 'like', '%'.$searchTerm.'%')
-                           ->orWhere('anilha_legal', 'like', '%'.$searchTerm.'%')
-                           ->orWhere('mae', 'like', '%'.$searchTerm.'%')
-                           ->orWhere('pai', 'like', '%'.$searchTerm.'%');
-                 })
-                 ->get();
+        $birds = Bird::where('user_id', Auth::id())
+            ->where(function ($query) use ($searchTerm) {
+                $query->where('nome', 'like', '%' . $searchTerm . '%')
+                    ->orWhere('especie', 'like', '%' . $searchTerm . '%')
+                    ->orWhere('anilha', 'like', '%' . $searchTerm . '%')
+                    ->orWhere('anilha_legal', 'like', '%' . $searchTerm . '%')
+                    ->orWhere('mae', 'like', '%' . $searchTerm . '%')
+                    ->orWhere('pai', 'like', '%' . $searchTerm . '%');
+            })
+            ->get();
 
-    return view('dashboard.index', compact('compoundName', 'birds'));
-}
+        return view('dashboard.index', compact('compoundName', 'birds'));
+    }
 
     public function logout()
     {
