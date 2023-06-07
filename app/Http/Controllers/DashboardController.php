@@ -42,6 +42,13 @@ class DashboardController extends Controller
         return view('dashboard.index', compact('compoundName', 'birds'));
     }
 
+    public function tree()
+    {
+        // Logica a fazer
+
+        return view('dashboard.birds.tree');
+    }
+
     public function logout()
     {
         Auth::logout();

@@ -12,7 +12,7 @@
                 </div>
                 <div>
                     <a href="{{ route('birds.create') }}" class="text-gray-300 mr-4">Cadastrar Ave</a>
-                    <a href="#" class="text-gray-300 mr-4">Árvore Genealógica</a>
+                    <a href="{{ route('birds.tree') }}" class="text-gray-300 mr-4">Árvore Genealógica</a>
                     <form action="{{ route('birds.search') }}" method="GET" class="inline-block">
                         <input type="text" placeholder="Pesquisar Ave" class="px-4 py-2 rounded-lg  focus:ring-blue-500 text-black" name="pesquisa" id="">
                         <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg ml-2">Pesquisar</button>
