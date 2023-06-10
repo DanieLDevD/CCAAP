@@ -6,6 +6,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\BirdController;
+use App\Http\Controllers\TreeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,8 +52,10 @@ Route::middleware('auth')->group(function () {
 
     // Rota pesquisar
     Route::get('/birds/search', [DashboardController::class, 'search'])->name('birds.search');
-});
 
     // Rota da arvore tree
-    Route::get('/birds/tree', [DashboardController::class, 'tree'])->name('birds.tree');
+    Route::get('/birds/tree', [TreeController::class, 'tree'])->name('birds.tree');
+});
+
+
 

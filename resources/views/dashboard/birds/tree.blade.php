@@ -14,25 +14,31 @@
 </nav>
 
 <div class="container">
-    <div class="py-4 px-4">
-        <table>
+<div class="container mx-auto py-4 px-4">
+        <table class="w-full bg-white shadow-md rounded">
+            <thead>
+                <tr class="bg-gray-200">
+                    <th class="py-2 px-4 text-center">Ave</th>
+                    <th class="py-2 px-4 text-center">Sexo</th>
+                    <th class="py-2 px-4 text-center">Mãe</th>
+                    <th class="py-2 px-4 text-center">Pai</th>
+                    <th class="py-2 px-4 text-center"></th>
+                </tr>
+            </thead>
             <tbody>
-                <tr class="flex flex-col h-10 bg-slate-700">
-                    <td class="px-4 py-2 text-center">Nome:</td>
-                    <td class="px-4 py-2 text-center">Sexo:</td>
-                    <td class="px-4 py-2 text-center">Avó:</td>
-                    <td class="px-4 py-2 text-center">Avô:</td>
-                    <td class="px-4 py-2 text-center">Mãe:</td>
-                    <td class="px-4 py-2 text-center">Pai:</td>
-                    <td class="px-4 py-2 text-center">Irmãos:</td>
-                    <td class="px-4 py-2 text-center">Conjugue:</td>
-                    <td class="px-4 py-2 text-center">Filhotes:</td>
-                    <td class="px-4 py-2 text-center">
-                        <a href="" class="text-blue-500 hover:text-blue-700">Editar</a>
+                @foreach($birds as $bird)
+                <tr>
+                    <td class="py-2 px-4 text-center">{{ $bird->nome }}</td>
+                    <td class="py-2 px-4 text-center">{{ $bird->sexo }}</td>
+                    <td class="py-2 px-4 text-center">{{ $bird->mae }}</td>
+                    <td class="py-2 px-4 text-center">{{ $bird->pai }}</td>
+                    <td class="py-2 px-4 text-center">
+                        <!-- Botões ou ações adicionais aqui -->
                     </td>
                 </tr>
+                @endforeach
             </tbody>
-        </table>        
+        </table>
     </div>
 </div>
 @endsection
