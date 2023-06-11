@@ -8,7 +8,7 @@
         <nav class="bg-green-800  py-4 px-6">
             <div class="container mx-auto flex justify-between items-center">
                 <div>
-                    <h3 class="text-2xl font-bold mb-4 text-white"> Olá <span class="text-blue-500 hover:text-blue-700">{{ $compoundName }}</span>. Bem Vindo ao CCAAP!</h2>
+                    <h3 class="text-2xl font-bold mb-4 text-white"> Olá <span class="text-blue-500 hover:text-blue-700">{{ $compoundName }}</span>. Bem Vindo ao CCAAP!</h3>
                 </div>
                 <div>
                     <a href="{{ route('birds.create') }}" class="text-gray-300 mr-4">Cadastrar Ave</a>
