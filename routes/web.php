@@ -53,9 +53,6 @@ Route::middleware('auth')->group(function () {
     // Rota pesquisar
     Route::get('/birds/search', [DashboardController::class, 'search'])->name('birds.search');
 
-    // Rota da arvore tree
+    // Rota da árvore genealógica
     Route::get('/birds/tree', [TreeController::class, 'tree'])->name('birds.tree');
 });
-
-
-
