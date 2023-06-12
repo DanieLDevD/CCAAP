@@ -50,6 +50,26 @@
                 <label for="pai" class="block mb-1">Pai:</label>
                 <input type="text" name="pai" id="pai" class="w-full px-3 py-2 border rounded">
             </div>
+            <div class="mb-4">
+                <label for="pai" class="block mb-1">Avô Paterno:</label>
+                <input type="text" name="pat_grandfather" id="pat_grandfather" class="w-full px-3 py-2 border rounded">
+            </div>
+
+            <div class="mb-4">
+                <label for="pai" class="block mb-1">Avó Paterno:</label>
+                <input type="text" name="pat_grandmother" id="pat_grandmother" class="w-full px-3 py-2 border rounded">
+            </div>
+
+            <div class="mb-4">
+                <label for="pai" class="block mb-1">Avô Materno:</label>
+                <input type="text" name="mat_grandfather" id="mat_grandfather" class="w-full px-3 py-2 border rounded">
+            </div>
+
+
+            <div class="mb-4">
+                <label for="pai" class="block mb-1">Avó Materno:</label>
+                <input type="text" name="mat_grandmother" id="mat_grandmother" class="w-full px-3 py-2 border rounded">
+            </div>
 
             <div class="mb-4 flex flex-col sm:flex-row sm:items-center sm:justify-between">
                 <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Cadastrar Ave</button>

@@ -21,6 +21,10 @@ return new class extends Migration
             $table->enum('sexo', ['Macho', 'Fêmea', 'Indefinido']);
             $table->string('mae')->nullable();
             $table->string('pai')->nullable();
+            $table->string('pat_grandfather');
+            $table->string('pat_grandmother');
+            $table->string('mat_grandfather');
+            $table->string('mat_grandmother');
             $table->unsignedBigInteger('user_id');
             $table->timestamps();
 

@@ -23,6 +23,10 @@
                             <th class="py-2 px-4 text-center">Sexo</th>
                             <th class="py-2 px-4 text-center">Mãe</th>
                             <th class="py-2 px-4 text-center">Pai</th>
+                            <th class="py-2 px-4 text-center">Avô Paterno</th>
+                            <th class="py-2 px-4 text-center">Avó Paterno</th>
+                            <th class="py-2 px-4 text-center">Avô Materno</th>
+                            <th class="py-2 px-4 text-center">Avó Materno</th>
                             <th class="py-2 px-4 text-center"></th>
                         </tr>
                     </thead>
@@ -33,6 +37,10 @@
                             <td class="py-2 px-4 text-center">{{ $bird->sexo }}</td>
                             <td class="py-2 px-4 text-center">{{ $bird->mae }}</td>
                             <td class="py-2 px-4 text-center">{{ $bird->pai }}</td>
+                            <td class="py-2 px-4 text-center">{{ $bird->pat_grandfather }}</td>
+                            <td class="py-2 px-4 text-center">{{ $bird->pat_grandmother }}</td>
+                            <td class="py-2 px-4 text-center">{{ $bird->mat_grandfather }}</td>
+                            <td class="py-2 px-4 text-center">{{ $bird->mat_grandmother }}</td>
                             <td class="py-2 px-4 text-center">
                                 <!-- Botões ou ações adicionais aqui -->
                             </td>

@@ -35,7 +35,11 @@ class DashboardController extends Controller
                     ->orWhere('anilha', 'like', '%' . $searchTerm . '%')
                     ->orWhere('anilha_legal', 'like', '%' . $searchTerm . '%')
                     ->orWhere('mae', 'like', '%' . $searchTerm . '%')
-                    ->orWhere('pai', 'like', '%' . $searchTerm . '%');
+                    ->orWhere('pai', 'like', '%' . $searchTerm . '%')
+                    ->orWhere('pat_grandfather', 'like', '%' . $searchTerm . '%')
+                    ->orWhere('pat_grandmother', 'like', '%' . $searchTerm . '%')
+                    ->orWhere('mat_grandfather', 'like', '%' . $searchTerm . '%')
+                    ->orWhere('mat_grandmother', 'like', '%' . $searchTerm . '%');
             })
             ->get();
 

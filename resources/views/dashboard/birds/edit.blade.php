@@ -44,6 +44,28 @@
                 <label for="pai" class="block text-gray-700 font-bold mb-2">Pai:</label>
                 <input type="text" id="pai" name="pai" value="{{ $bird->pai }}" class="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
             </div>
+
+            <div class="mb-4">
+                <label for="pai" class="block text-gray-700 font-bold mb-2">Avô Paterno</label>
+                <input type="text" id="pat_grandfather" name="pat_grandfather" value="{{ $bird->pat_grandfather }}" class="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+
+            <div class="mb-4">
+                <label for="pai" class="block text-gray-700 font-bold mb-2">Avó Paterno</label>
+                <input type="text" id="pat_grandmother" name="pat_grandmother" value="{{ $bird->pat_grandmother }}" class="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div class="mb-4">
+                <label for="pai" class="block text-gray-700 font-bold mb-2">Avô Materno</label>
+                <input type="text" id="mat_grandfather" name="mat_grandfather" value="{{ $bird->mat_grandfather }}" class="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div class="mb-4">
+                <label for="pai" class="block text-gray-700 font-bold mb-2">Avó Materno</label>
+                <input type="text" id="mat_grandmother" name="mat_grandmother" value="{{ $bird->mat_grandmother }}" class="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
             <div class="flex justify-between items-center mb-4">
                 <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg">Atualizar</button>
                 <a href="{{ route('dashboard.index') }}" class="text-blue-500 hover:underline">Voltar para a Dashboard</a>

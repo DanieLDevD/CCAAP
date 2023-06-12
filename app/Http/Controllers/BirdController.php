@@ -38,6 +38,10 @@ class BirdController extends Controller
         $bird->sexo = $request->sexo;
         $bird->mae = $request->mae;
         $bird->pai = $request->pai;
+        $bird->pat_grandfather = $request->pat_grandfather;
+        $bird->pat_grandmother = $request->pat_grandmother;
+        $bird->mat_grandfather = $request->mat_grandfather;
+        $bird->mat_grandmother = $request->mat_grandmother;
         $bird->user_id = auth()->user()->id; // Vincula o pássaro ao usuário logado
         $bird->save();
 
@@ -63,6 +67,10 @@ class BirdController extends Controller
         $bird->sexo = $request->sexo;
         $bird->mae = $request->mae;
         $bird->pai = $request->pai;
+        $bird->pat_grandfather = $request->pat_grandfather;
+        $bird->pat_grandmother = $request->pat_grandmother;
+        $bird->mat_grandfather = $request->mat_grandfather;
+        $bird->mat_grandmother = $request->mat_grandmother;
         $bird->save();
 
         return redirect()->route('dashboard.index')->with('success', 'Cadastro de pássaro atualizado com sucesso!');
