@@ -32,12 +32,16 @@
                 <h4 class="text-white text-lg font-bold">Suporte</h4>
                 <a href="#" class="text-gray-300 hover:text-white">FAQ</a>
             </div>
-            <div>
-                <div class="flex justify-between w-20">
-                    <img src="#" alt="Icon 1" class="h-5">
-                    <img src="#" alt="Icon 2" class="h-5">
-                    <img src="#" alt="Icon 3" class="h-5">
-                </div>
+            <div class="flex justify-between w-20 space-x-2">
+                <a href="https://instagram.com/victor_prudente27?igshid=NGExMmI2YTkyZg==" target="_blank" rel="noopener noreferrer">
+                    @include('components.icons.instagram')
+                </a>
+                <a href="https://github.com/DanieLDevD/CCAAP/tree/main" target="_blank" rel="noopener noreferrer">
+                    @include('components.icons.github')
+                </a>
+                <a href="https://www.linkedin.com/in/victor-prudente/" target="_blank" rel="noopener noreferrer">
+                    @include('components.icons.linkedin')
+                </a>
             </div>
         </div>
         <div class="text-center mt-4 text-gray-300 text-sm">
