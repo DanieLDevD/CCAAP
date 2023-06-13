@@ -5,7 +5,7 @@
 <body>
     <div class="flex flex-col min-h-screen">
         <!-- Navbar -->
-        <nav class="bg-green-800  py-4 px-6">
+        <nav class="bg-gray-900  py-4 px-6">
             <div class="container mx-auto flex justify-between items-center">
                 <div>
                     <h3 class="text-2xl font-bold mb-4 text-white"> Olá <span class="text-blue-500 hover:text-blue-700">{{ $compoundName }}</span>. Bem Vindo ao CCAAP!</h3>
@@ -51,11 +51,11 @@
                         <td class="px-4 py-2 text-center">{{ $bird->mae }}</td>
                         <td class="px-4 py-2 text-center">{{ $bird->pai }}</td>
                         <td class="px-4 py-2 text-center">
-                            <a href="{{ route('birds.edit', $bird) }}" class="text-blue-500 hover:text-blue-700">Editar</a>
+                            <a href="{{ route('birds.edit', $bird) }}" class="text-white bg-blue-500 px-4 py-3 rounded-lg">Editar</a>
                             <form action="{{ route('birds.destroy', $bird->id) }}" method="POST" class="inline-block">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="ml-2 bg-red-500 px-4 py-2 rounded-lg">Excluir</button>
+                                <button type="submit" class="ml-2 text-white bg-red-500 px-4 py-2 rounded-lg">Excluir</button>
                             </form>
                         </td>
                     </tr>
@@ -64,7 +64,5 @@
             </table>
         </div>
     </div>
-
-    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 @endsection

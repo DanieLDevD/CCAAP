@@ -2,7 +2,7 @@
 
 @section('content')
 
-<body class="flex items-center justify-center min-h-screen bg-gray-100">
+<div class="flex items-center justify-center min-h-screen">
     <div class="w-full max-w-md bg-white rounded-lg shadow-md p-8">
         <h2 class="text-2xl font-bold mb-4">Editar Cadastro de Pássaro</h2>
         <form action="{{ route('birds.update', $bird->id) }}" method="POST">
@@ -72,7 +72,6 @@
             </div>
         </form>
     </div>
+</div>
 
-    <script src="{{ asset('js/app.js') }}"></script>
-</body>
 @endsection

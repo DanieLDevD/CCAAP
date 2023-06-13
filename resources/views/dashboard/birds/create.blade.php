@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
-<div class="flex items-center justify-center min-h-screen bg-green-200">
-    <div class="max-w-md w-full mx-4">
+<div class="flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-md bg-white rounded-lg shadow-md p-8">
         <h2 class="text-2xl font-bold mb-4 text-center">Cadastrar Ave</h2>
 
         <form action="{{ route('birds.store') }}" method="POST" class="mb-4">
@@ -56,7 +56,7 @@
             </div>
 
             <div class="mb-4">
-                <label for="pai" class="block mb-1">Avó Paterno:</label>
+                <label for="pai" class="block mb-1">Avó Paterna:</label>
                 <input type="text" name="pat_grandmother" id="pat_grandmother" class="w-full px-3 py-2 border rounded">
             </div>
 
@@ -67,7 +67,7 @@
 
 
             <div class="mb-4">
-                <label for="pai" class="block mb-1">Avó Materno:</label>
+                <label for="pai" class="block mb-1">Avó Materna:</label>
                 <input type="text" name="mat_grandmother" id="mat_grandmother" class="w-full px-3 py-2 border rounded">
             </div>
 
