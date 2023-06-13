@@ -2,6 +2,9 @@
 @section('content')
 <div class="flex justify-center items-center h-screen">
     <div class="max-w-md mx-auto bg-white shadow-md rounded-md p-8">
+    <div class="flex justify-center items-center mb-4">
+            @include('components.icons.logoproject')
+        </div>
         <div class="text-center">
             <h2 class="text-2xl font-bold mb-4">Seja Bem Vindo ao CCAAP</h2>
             <p class="text-gray-600">Uma aplicação web para facilitar o controle de pássaros!</p>
