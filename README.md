@@ -1,66 +1,93 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Controle para Criadores Amadores de Aves Passeriformes (CCAAP)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+É uma aplicação web que o usuário consegue estar cadastrando seus respectivos pássaros, contendo informações de nome, espécie, anilha, anilha legal, data de nascimento, pai e mãe, gerando ainda uma árvore genealógica de cada pássaro.
 
-## About Laravel
+## Requisitos
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Antes de começar, verifique se você atende aos seguintes requisitos:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Laravel Framework (versão 10.12.0)
+- PHP (versão 8.1.2)
+- Composer (versão 2.2.6)
+- Node.js (versão 20.2.0)
+- NPM (versão 9.6.7)
+- MySQL (versão 8.0.33)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Instalação
 
-## Learning Laravel
+Siga estas etapas para clonar o repositório, instalar o projeto e configurar o banco de dados em sua máquina local via terminal:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+1. Clone o repositório:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+    ```shell
+   git clone https://github.com/DanieLDevD/CCAAP.git
+   ```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+2. Navegue até o diretório do projeto:
 
-## Laravel Sponsors
+    ```shell
+    cd nome-do-projeto
+    ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+3. Instale as dependências do Composer:
 
-### Premium Partners
+    ```shell
+    composer install
+    ```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+4. Instale as dependências do Node.js (incluindo o Tailwind CSS):
 
-## Contributing
+    ```shell
+    npm install
+    ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+5. Crie o arquivo .env:
 
-## Code of Conduct
+    ```shell
+    cp .env.example .env
+    ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+6. Configure as variáveis de ambiente no arquivo .env para conectar-se ao banco de dados. Por exemplo:
 
-## Security Vulnerabilities
+    ```shell
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=nome-do-banco-de-dados
+    DB_USERNAME=usuario-do-banco-de-dados
+    DB_PASSWORD=senha-do-banco-de-dados
+    ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+7. Gere uma nova chave de aplicativo:
 
-## License
+    ```shell
+    php artisan key:generate
+    ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+8. Compile os ativos (incluindo o CSS do Tailwind):
+
+    ```shell
+    npm run dev
+    ```
+
+9. Execute as migrações do banco de dados para criar as tabelas necessárias:
+
+    ```shell
+    php artisan migrate
+    ```
+
+10. Execute o servidor de desenvolvimento do Laravel:
+
+    ```shell
+    php artisan serve
+    ```
+
+## Uso
+
+Siga estas etapas para iniciar o projeto e usá-lo localmente:
+
+1. Certifique-se de que o servidor de desenvolvimento do Laravel esteja em execução.
+
+2. Abra o navegador e acesse http://localhost:8000 (ou outro endereço fornecido pelo terminal).
+
+3. Você poderá ver o projeto em ação e interagir com suas funcionalidades.
