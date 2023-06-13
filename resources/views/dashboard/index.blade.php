@@ -25,18 +25,18 @@
         <!-- Body -->
         <div class="container mx-auto mt-8">
             <h2 class="text-2xl font-bold mb-4">Lista de Aves Cadastradas</h2>
-            <table class="min-w-full border border-gray-200 rounded-lg">
+            <table class="min-w-full border bg-white rounded">
                 <thead>
-                    <tr>
-                        <th class="px-4 py-2 bg-green-200 text-green-800 text-center">Nome</th>
-                        <th class="px-4 py-2 bg-green-200 text-green-800 text-center">Espécie</th>
-                        <th class="px-4 py-2 bg-green-200 text-green-800 text-center">Anilha</th>
-                        <th class="px-4 py-2 bg-green-200 text-green-800 text-center">Anilha Legal</th>
-                        <th class="px-4 py-2 bg-green-200 text-green-800 text-center">Data de Nascimento</th>
-                        <th class="px-4 py-2 bg-green-200 text-green-800 text-center">Sexo</th>
-                        <th class="px-4 py-2 bg-green-200 text-green-800 text-center">Mãe</th>
-                        <th class="px-4 py-2 bg-green-200 text-green-800 text-center">Pai</th>
-                        <th class="px-4 py-2 bg-green-200 text-green-800 text-center">Ações</th>
+                    <tr class="bg-gray-200">
+                        <th class="px-4 py-2 text-center">Nome</th>
+                        <th class="px-4 py-2 text-center">Espécie</th>
+                        <th class="px-4 py-2 text-center">Anilha</th>
+                        <th class="px-4 py-2 text-center">Anilha Legal</th>
+                        <th class="px-4 py-2 text-center">Data de Nascimento</th>
+                        <th class="px-4 py-2 text-center">Sexo</th>
+                        <th class="px-4 py-2 text-center">Mãe</th>
+                        <th class="px-4 py-2 text-center">Pai</th>
+                        <th class="px-4 py-2 text-center">Ações</th>
                     </tr>
                 </thead>
                 <tbody>

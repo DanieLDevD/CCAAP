@@ -19,10 +19,10 @@
         @yield('content')
     </main>
 
-    <footer class="bg-gray-800 py-4">
+    <footer class="bg-gray-800 py-0.1">
         <div class="container mx-auto flex items-center justify-between">
             <div class="w-16 ">
-                @include('components.icons.logoproject')
+                @include('components.icons.logoprojectwhite')
             </div>
             <div>
                 <h4 class="text-white text-lg font-bold">Inicio</h4>

@@ -1,8 +1,8 @@
 @extends('layouts.app')
 @section('content')
 <div class="flex justify-center items-center h-screen">
-    <div class="max-w-md mx-auto bg-white shadow-md rounded-md p-8">
-    <div class="flex justify-center items-center mb-4">
+    <div class="max-w-md mx-auto bg-slate-200 shadow-md rounded-md p-8">
+        <div class="flex justify-center items-center mb-4">
             @include('components.icons.logoproject')
         </div>
         <div class="text-center">
