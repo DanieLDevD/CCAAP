@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>CCAAP</title>
 </head>
 
-<body class="bg-emerald-700">
+<body class="bg-green-600">
     <header>
         <!-- Adicione aqui o código do cabeçalho -->
     </header>

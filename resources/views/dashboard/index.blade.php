@@ -3,7 +3,7 @@
 @section('content')
 
 <body>
-    <div class="flex flex-col min-h-screen">
+    <div class="bg-slate-100 flex flex-col min-h-screen">
         <!-- Navbar -->
         <nav class="bg-gray-900  py-4 px-6">
             <div class="container mx-auto flex justify-between items-center">
@@ -23,11 +23,11 @@
         </nav>
 
         <!-- Body -->
-        <div class="container mx-auto mt-8">
+        <div class="bg-slate-100 container mx-auto mt-8">
             <h2 class="text-2xl font-bold mb-4">Lista de Aves Cadastradas</h2>
             <table class="min-w-full border bg-white rounded">
                 <thead>
-                    <tr class="bg-gray-200">
+                    <tr class="bg-green-600">
                         <th class="px-4 py-2 text-center">Nome</th>
                         <th class="px-4 py-2 text-center">Espécie</th>
                         <th class="px-4 py-2 text-center">Anilha</th>
