@@ -1,6 +1,6 @@
 @extends('layouts.app')
 <div class="flex items-center justify-center h-screen">
-    <div class="max-w-md w-full mx-auto">
+    <div class="bg-slate-100 p-4 rounded-md max-w-md w-full mx-auto">
         <div class="text-center mb-4">
             <h2 class="text-2xl font-bold mb-4 text-center">Cadastre uma Conta</h2>
         </div>

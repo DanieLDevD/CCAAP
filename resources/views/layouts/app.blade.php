@@ -10,7 +10,7 @@
     <title>CCAAP</title>
 </head>
 
-<body class="bg-emerald-700">
+<body class="bg-green-600">
     <header>
         <!-- Adicione aqui o código do cabeçalho -->
     </header>
